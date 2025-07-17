@@ -2,39 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FashionSense</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>FashionSense - Your Style, Your Way</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
 </head>
 <body>
 
   <header>
-    <div class="logo">👗 StyleSync </div>
+    <div class="logo">👗 StyleSync</div>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Customize</a>
+      <a href="#">Try Outfit</a>
       <a href="#">Help Others</a>
+      <a href="#">Inspire Me</a>
     </nav>
   </header>
 
   <section class="hero">
     <h1>Design Your Own Look</h1>
-    <p>Match, Customize, and Inspire.</p>
-    <button>Get Started</button>
+    <p>AI-powered fashion generator. Customize outfits and get styled by the crowd!</p>
+    <button onclick="location.href='/customize'">Get Started</button>
   </section>
 
   <section class="features">
     <div class="feature-box">
       <h2>👚 Customize Products</h2>
-      <p>Pick outfits, mix styles, and generate fashion ideas tailored for you.</p>
+      <p>Upload your wardrobe or explore templates. Mix & match to find the perfect outfit with AI support.</p>
+      <button onclick="location.href='/customize'">Try Now</button>
     </div>
     <div class="feature-box">
       <h2>🌟 Help Others Improve</h2>
-      <p>Rate, suggest, and refine others' fashion combinations.</p>
+      <p>Rate fashion submissions, give feedback, or remix their styles with your own twist.</p>
+      <button onclick="location.href='/review'">Start Helping</button>
+    </div>
+    <div class="feature-box">
+      <h2>💡 Get Inspired</h2>
+      <p>Not sure what to wear? Let AI suggest trendy combinations based on mood, weather, or event.</p>
+      <button onclick="location.href='/inspire'">Inspire Me</button>
     </div>
   </section>
 
+  <section class="cta">
+    <h2>Be a Fashion Influencer</h2>
+    <p>Show off your creativity, grow your fashion rep, and become a style inspiration for others.</p>
+    <button onclick="location.href='/community'">Join Community</button>
+  </section>
+
   <footer>
-    <p>Made with ❤️ by Anvi</p>
+    <p>Made with ❤️ by Anvi & FashionSense Team | Follow us @StyleSync</p>
   </footer>
 
 </body>

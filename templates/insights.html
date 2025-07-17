@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insights</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Analytics Insights</h2>
+        <h3>Popular Brands:</h3>
+        <ul>
+            {% for brand in data.popular_brands %}
+                <li>{{ brand }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Top Categories:</h3>
+        <ul>
+            {% for category in data.top_categories %}
+                <li>{{ category }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>User Statistics:</h3>
+        <p>Women: {{ data.user_stats.women }}%</p>
+        <p>Men: {{ data.user_stats.men }}%</p>
+
+        <h3>Trending Colors:</h3>
+        <ul>
+            {% for color in data.trending_colors %}
+                <li>{{ color }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
